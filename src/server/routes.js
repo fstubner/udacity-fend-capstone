@@ -1,4 +1,4 @@
-const { getCountryName, getPlace, getPlaceImage, getForecast } = require('./apis');
+const { getCountryName, getPlace, getPlaceImage, getForecast } = require('./apis.js');
 const ROUTER = require('express').Router();
 
 

@@ -1,4 +1,4 @@
-export const countries = {
+const countries = {
     "BD": "Bangladesh",
     "BE": "Belgium",
     "BF": "Burkina Faso",
@@ -250,3 +250,5 @@ export const countries = {
     "QA": "Qatar",
     "MZ": "Mozambique"
 };
+
+module.exports = { countries };

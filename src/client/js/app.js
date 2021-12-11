@@ -1,6 +1,6 @@
-import { hideError, showError, toggleLoader, toggleFormButtonState } from "./utils";
+const { hideError, showError, toggleLoader, toggleFormButtonState } = require("./utils.js");
 
-export const DEPARTURE_DATE_INPUT = document.getElementById('departure-date-input');
+const DEPARTURE_DATE_INPUT = document.getElementById('departure-date-input');
 const PLACE_NAME_INPUT = document.getElementById('placename-input');
 const PLACE_IMAGE_CONTAINER = document.getElementById('place-image-container');
 const FORECAST_CONTAINER = document.getElementById('forecast-container');
@@ -9,7 +9,7 @@ const FORECAST_CONTAINER = document.getElementById('forecast-container');
 * @description Handles form submission event.
 * @param {Event} event - The form onsubmit event.
 */
-export async function formSubmit(event) {
+async function formSubmit(event) {
     event.preventDefault();
 
     PLACE_IMAGE_CONTAINER.innerHTML = '';
@@ -195,3 +195,4 @@ async function setForecast(forecastResult) {
     FORECAST_CONTAINER.appendChild(fragment);
 }
 
+module.exports = { formSubmit, DEPARTURE_DATE_INPUT };

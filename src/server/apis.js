@@ -1,5 +1,5 @@
 const REQUEST = require('axios').default;
-const COUNTRIES = require('./countries');
+const COUNTRIES = require('./countries.js');
 
 /**
 * @description Retrieves an image for a place from the Pixabay API.
@@ -11,7 +11,7 @@ const COUNTRIES = require('./countries');
 * }
 */
 async function getPlaceImage(place) {
-    const PIXABAY_API_KEY = process.env.PIXABAY_API_KEY;
+    const PIXABAY_API_KEY = '3445259-8f68fa3112989162cdb88eba0';
     let placeImageUrl = '';
     let placeImageTags = '';
     try {
@@ -59,7 +59,7 @@ async function getPlaceImage(place) {
 * ]
 */
 async function getForecast(place, departureDate) {
-    const WEATHERBIT_API_KEY = process.env.WEATHERBIT_API_KEY;
+    const WEATHERBIT_API_KEY = '5b967241a1d24a8484ded79b85c262ff';
     const TODAYS_DATE = new Date();
     const DEPARTURE_DATE = new Date(departureDate);
     let forecastResult = [];
@@ -129,7 +129,7 @@ async function getForecast(place, departureDate) {
 * }
 */
 async function getPlace(placeName) {
-    const GEONAMES_USERNAME = process.env.GEONAMES_USERNAME;
+    const GEONAMES_USERNAME = 'fstubner';
     const PLACE = {};
     await REQUEST.get(`http://api.geonames.org/postalCodeLookupJSON?placename=${encodeURIComponent(placeName)}&username=${GEONAMES_USERNAME}`)
         .then(res => res.data)

@@ -1,5 +1,5 @@
-import { DEPARTURE_DATE_INPUT, formSubmit } from './js/app';
-import { LOGO_IMAGE, ERROR_IMAGE, FORM_BUTTON, setInputDateRange } from './js/utils';
+import { DEPARTURE_DATE_INPUT, formSubmit } from './js/app.js';
+import { LOGO_IMAGE, ERROR_IMAGE, setInputDateRange } from './js/utils.js';
 import notFoundImage from './images/not_found.png';
 import logoImage from './images/logo.png';
 import './styles/resets.scss';

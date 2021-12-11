@@ -22,6 +22,6 @@ APP.listen(PORT, (listening));
 /**
 * @description Callback function for Express server.
 */
-export function listening() {
+function listening() {
     console.log(`Server started on http://localhost:${PORT}`)
 }

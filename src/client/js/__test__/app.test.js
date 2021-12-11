@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { formSubmit } from '../app';
+const { formSubmit } = require('../app.js');
 
 test('Confirms the function is defined.', () => {
     expect(formSubmit).toBeDefined();

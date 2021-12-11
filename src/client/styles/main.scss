@@ -1,0 +1,107 @@
+form {
+  border-radius: 3px;
+  max-width: 40em;
+  padding: 0 40px;
+  margin: auto;
+}
+
+#form {
+  margin-top: 50px;
+}
+
+input {
+  padding: 5px 20px;
+  width: 100%;
+  line-height: 16px;
+  margin: 10px 0;
+  color: gainsboro;
+  background-color: #252e3b;
+  border: 0;
+  border-bottom: 1px solid gainsboro;
+  outline: none;
+}
+
+input:focus {
+  border-bottom: 1px solid #42a4ff;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 2px;
+  opacity: 0.6;
+  filter: invert(1);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+::placeholder {
+  color: rgb(190, 190, 190);
+  opacity: 1;
+}
+
+input[type="submit"],
+input[type="submit"]:enabled {
+  width: max-content;
+  background-color: #42a4ff;
+  border-radius: 3px;
+  border: 0px;
+  color: #2c343a;
+}
+
+input[type="submit"]:hover {
+  background-color: #5eb0fd;
+  color: #16181a;
+}
+
+input[type="submit"]:active {
+  background-color: #42a4ff;
+  color: #2c343a;
+}
+
+input[type="submit"]:disabled {
+  background-color: #6e8fad !important;
+  color: #3d4a53 !important;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.place-image {
+  margin-top: 50px;
+  max-width: 70%;
+  border-radius: 10px;
+  transition: margin-top 1s;
+  transition: height 1s;
+  transition-timing-function: ease;
+}
+
+.flex-container li {
+  display: inline;
+  display: grid;
+  grid-column: 1;
+  grid-template-columns: 6.5em;
+  justify-items: center;
+  background-color: white; /*Weather icons are not darkmode friendly. They are also not all centered :(*/
+  border-radius: 5px;
+  color: #252e3b;
+  margin: 50px 0.2em 0;
+}
+
+.forecast-date {
+  padding-top: 1em;
+}
+
+.forecast-icon {
+  width: 100%;
+}
+
+.forecast-description {
+  padding-bottom: 1em;
+  font-size: small;
+}

@@ -1,0 +1,13 @@
+header {
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#header-logo {
+  max-width: 450px;
+  min-width: 250px;
+  height: auto;
+  padding: 40px 40px 0 40px;
+}

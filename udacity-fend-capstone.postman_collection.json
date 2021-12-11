@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "7112fe5a-1d44-4eee-a036-f6b2a84f42e8",
+		"name": "udacity-fend-capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getPlace",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"placeName\": \"paris, france\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/getPlace",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getPlace"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getForecast",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"place\": {\r\n        \"lng\": -6.254537,\r\n        \"lat\": 53.353976,\r\n        \"countryCode\": \"IE\",\r\n        \"name\": \"dublin ireland\"\r\n    },\r\n    \"departureDate\": \"12-10-2021\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/getForecast",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getForecast"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPlaceImage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"place\": {\r\n        \"lng\": -6.254537,\r\n        \"lat\": 53.353976,\r\n        \"countryCode\": \"IE\",\r\n        \"name\": \"dublin ireland\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/getPlaceImage",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getPlaceImage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCountryName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"countryCode\": \"IE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/getCountryName",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getCountryName"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

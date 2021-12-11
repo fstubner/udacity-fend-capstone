@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel App</title>
+  </head>
+  <body class="grid-container">
+    <header>
+      <a class="flex-container" href="" rel="noopener noreferrer"
+        ><img id="header-logo" src="" alt="En Route logo"
+      /></a>
+    </header>
+    <main>
+      <section id="error-container" class="flex-container">
+        <img id="error-image" src="" alt="content not found" />
+        <div id="error-text" class="disable-select"></div>
+      </section>
+      <section id="place-image-container" class="flex-container"></section>
+      <section id="weather-container">
+        <ul id="forecast-container" class="flex-container"></ul>
+      </section>
+      <section id="form">
+        <form onsubmit="Client.formSubmit(event);">
+          <input
+            id="placename-input"
+            type="text"
+            placeholder="Enter a placename and country..."
+            oninput="this.reportValidity();"
+            autofocus
+            required
+          />
+          <input id="departure-date-input" type="date" required />
+          <input
+            id="form-button"
+            class="button"
+            type="submit"
+            value="Check weather"
+          />
+          <div id="loader" class=""></div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <span class="footer-text">
+        Made possible by
+        <a href="https://pixabay.com/api/docs/">pixabay</a>,
+        <a href="https://www.geonames.org/export/web-services.html">GeoNames</a
+        >, and
+        <a href="https://www.weatherbit.io/api">Weatherbit.io</a>
+      </span>
+    </footer>
+    <script>
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+    </script>
+  </body>
+</html>

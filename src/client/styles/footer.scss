@@ -1,0 +1,26 @@
+footer {
+  margin-top: 2.5em;
+  padding: 0 40px;
+  grid-row: 3;
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+footer a:visited {
+  color: rgb(87, 123, 223);
+}
+
+footer a:link {
+  color: rgb(87, 123, 223);
+}
+
+footer a:hover {
+  color: rgb(116, 145, 223);
+}
+
+.footer-text {
+  font-size: small;
+  color: rgb(197, 197, 197);
+}
